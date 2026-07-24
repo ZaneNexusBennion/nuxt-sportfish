@@ -6,8 +6,8 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "npx nuxthub preview",
-    "deploy": "npx nuxthub deploy",
+    "preview": "bunx nuxthub preview",
+    "deploy": "bunx nuxthub deploy",
     "postinstall": "nuxt prepare",
     "lint": "eslint ."
   },
@@ -47,14 +47,13 @@
     "vue-tsc": "^2.2.10",
     "wrangler": "^4.20.1"
   },
-  "packageManager": "pnpm@10.12.1",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "sharp",
-      "unrs-resolver",
-      "workerd"
-    ]
-  }
+  "packageManager": "bun@latest",
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "esbuild",
+    "nuxt",
+    "sharp",
+    "unrs-resolver",
+    "workerd"
+  ]
 }
