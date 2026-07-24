@@ -18,7 +18,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-03-01',
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
-  hub: {},
+  hub: {
+    database: true
+  },
 
   // Development config
   eslint: {
@@ -27,6 +29,18 @@ export default defineNuxtConfig({
         quotes: 'single',
         commaDangle: 'never'
       }
+    }
+  },
+
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Sportfish Survey',
+      short_name: 'Sportfish',
+      theme_color: '#000000'
+    },
+    workbox: {
+      navigateFallback: '/'
     }
   }
 })
