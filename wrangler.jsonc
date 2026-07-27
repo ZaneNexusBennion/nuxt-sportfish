@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nuxt-sportfish",
+  "compatibility_date": "2026-07-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "./dist/server/index.mjs",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist/public",
+  },
+}
