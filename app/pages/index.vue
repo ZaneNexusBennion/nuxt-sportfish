@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>FISH</h1>
-    <form @submit="handlePress">
+    <form @submit.prevent="handlePress">
       <input
         v-model="msg"
         type="text"
@@ -15,7 +15,7 @@
       </UButton>
     </form>
     <p v-if="serverResponse">
-      {serverResponse}
+      {{ serverResponse }}
     </p>
   </div>
 </template>
